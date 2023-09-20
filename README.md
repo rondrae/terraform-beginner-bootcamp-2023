@@ -24,3 +24,11 @@ Instead of using init, use before. The reason for this is if you open an already
 
 https://www.gitpod.io/docs/configure/workspaces/tasks
 
+
+
+#### Persisting Env Vars in Gitpod
+
+Store the env vars in Gitpod Storage using this command -  gp env PROJECT_ROOT='/workspace/terraform-beginner-bootcamp-2023'
+
+
+
