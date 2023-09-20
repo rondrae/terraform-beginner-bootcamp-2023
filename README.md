@@ -28,9 +28,7 @@ https://www.gitpod.io/docs/configure/workspaces/tasks
 
 #### Persisting Env Vars in Gitpod
 
-Store the env vars in Gitpod Storage.
-
- gp env PROJECT_ROOT='/workspace/terraform-beginner-bootcamp-2023'
+Store the env vars in Gitpod Storage using this command -  gp env PROJECT_ROOT='/workspace/terraform-beginner-bootcamp-2023'
 
 
 
