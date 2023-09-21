@@ -31,4 +31,18 @@ https://www.gitpod.io/docs/configure/workspaces/tasks
 Store the env vars in Gitpod Storage using this command -  gp env PROJECT_ROOT='/workspace/terraform-beginner-bootcamp-2023'
 
 
+### AWS CLI Installation
+
+AWS CLI is installed for this project via bash script [`./bin/install_aws_cli`](./bin/install_aws_cli)
+
+[Getting Started Installing AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+[AWS CLI Env Vars](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+
+You will need to generate access keys for an aws iam user to use with the environment variables.
+Check if AWS credentials are configured properly.
+```sh
+aws sts get-caller-identity
+```
 
