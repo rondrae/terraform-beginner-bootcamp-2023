@@ -46,11 +46,3 @@ Check if AWS credentials are configured properly.
 aws sts get-caller-identity
 ```
 
-## Terraform Basics
-
-### Terraform Registry
-
-Terraform registry is where you get the providers and modules. [Terraform Registry](https://registry.terraform.io)
-
-
-We used Terraform random provider to generate a random string for a bucket name. [Terraform Random String Provider](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)
