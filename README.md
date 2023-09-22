@@ -54,3 +54,13 @@ Terraform registry is where you get the providers and modules. [Terraform Regist
 
 
 We used Terraform random provider to generate a random string for a bucket name. [Terraform Random String Provider](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)
+
+
+
+## Created S3 bucket using Terraform
+
+I used a Terraform Randon String Provider to provide a name. S3 only takes lower case in the name so I made min_lower value the same as the length.
+```  length           = 16
+     special          = false
+     override_special = "/@£$"
+     min_lower = 16```
