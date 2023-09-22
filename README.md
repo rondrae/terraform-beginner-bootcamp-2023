@@ -63,4 +63,4 @@ I used a Terraform Randon String Provider to provide a name. S3 only takes lower
 ```  length           = 16
      special          = false
      override_special = "/@£$"
-     min_lower = 16```
+     min_lower = 16 ```
