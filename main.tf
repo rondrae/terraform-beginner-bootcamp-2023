@@ -9,6 +9,13 @@ terraform {
       version = "5.17.0"
     }
   }
+  cloud {
+  organization = "drae-terraform"
+
+  workspaces {
+      name = "terra-house-sleep"
+    }
+  }
 }
 
 provider "random" {
