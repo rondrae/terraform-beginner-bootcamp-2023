@@ -64,3 +64,7 @@ I used a Terraform Randon String Provider to provide a name. S3 only takes lower
      special          = false
      override_special = "/@£$"
      min_lower = 16 ```
+
+## Added Terraform Cloud
+
+Terraform cloud is now our backend for our tfstate. The current state was migrated to the cloud.
