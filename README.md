@@ -68,3 +68,4 @@ I used a Terraform Randon String Provider to provide a name. S3 only takes lower
 ## Added Terraform Cloud
 
 Terraform cloud is now our backend for our tfstate. The current state was migrated to the cloud.
+Used a bash script generate and store the token.
