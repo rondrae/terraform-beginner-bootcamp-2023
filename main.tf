@@ -26,9 +26,9 @@ provider "random" {
 
 provider "aws" {
   # Configuration options
-  region = "ca-central-1"
-  access_key = ""
-  secret_key = ""
+  region = var.aws_default_region
+  access_key = var.access_key
+  secret_key = var.secret_key
 }
 
 
