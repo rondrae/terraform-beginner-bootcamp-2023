@@ -1,6 +1,20 @@
 # Terraform Beginner Bootcamp 2023
 
 
+## Table of Content
+
+- [Install Terraform CLI](#install-the-terraform-cli)
+- [Refactor Terraform installation into a Bash Scripts](#refactor-terraform-installation-into-a-bash-scripts)
+- [Consideration for Linux Distro](#consideration-for-linux-distro)
+- [Andrew's Trap Card - Gitpod LifeCycle](#andrews-trap-card---gitpod-lifecycle)
+- [Persisting Env Vars in Gitpod](#persisting-env-vars-in-gitpod)
+- [AWS CLI Installation](#aws-cli-installation)
+- [Terraform Basics](#terraform-basics)
+- [Terraform Registry](#terraform-registry)
+- [Created S3 bucket using Terraform](#created-s3-bucket-using-terraform)
+- [Added Terraform Cloud]()
+
+
 ## Install the Terraform CLI
 
 The installation instructions have changed because of gpg keyring changes. So the original gitpod yaml was using something deprecated. 
@@ -65,7 +79,7 @@ I used a Terraform Randon String Provider to provide a name. S3 only takes lower
      override_special = "/@£$"
      min_lower = 16 ```
 
-## Added Terraform Cloud
+### Added Terraform Cloud
 
 Terraform cloud is now our backend for our tfstate. The current state was migrated to the cloud.
 Used a bash script generate and store the token.
