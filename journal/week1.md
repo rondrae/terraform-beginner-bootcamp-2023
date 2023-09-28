@@ -21,3 +21,16 @@ I restructured the root module by creating various .tf and a tfvars file. The fi
 
 I changed the bucket name from 16 random characters to bucket- 4 random characters. Also fixed config drift with s3 bucket.
 
+## Terraform Modules
+
+Added a module called terrahouse. This was used to create an s3 bucket that will store our website.
+
+### Modules Sources 
+
+``` module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+
+}
+```

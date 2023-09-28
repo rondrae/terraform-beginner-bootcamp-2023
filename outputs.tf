@@ -1,3 +1,4 @@
-output "ramdon_bucket_name" {
-  value = aws_s3_bucket.website_bucket.id
+output "bucket_name" {
+  description = "Bucket Name for static website"
+  value = module.terrahouse_aws.ramdon_bucket_name
 }

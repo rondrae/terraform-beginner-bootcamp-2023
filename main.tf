@@ -1,16 +1,14 @@
 
-resource "random_string" "bucket_name" {
-  length           = 4
-  special          = false
-  override_special = "/@£$"
-  min_lower = 4
-}
 
-resource "aws_s3_bucket" "website_bucket" {
-  bucket = "bucket-${random_string.bucket_name.result}"
-  tags = {
-    UserUuid = var.user_uuid
-  }
+
+
+
+
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+
 }
 
 
