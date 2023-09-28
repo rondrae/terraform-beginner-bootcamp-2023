@@ -1,3 +1,3 @@
 output "ramdon_bucket_name" {
-  value = random_string.bucket_name.id
+  value = aws_s3_bucket.website_bucket.id
 }
