@@ -2,6 +2,10 @@
 
 # Terraform Beginner Bootcamp 2003 - Week 1
 
+
+![Week_1_diagram](https://github.com/rondrae/terraform-beginner-bootcamp-2023/assets/18177131/bcb40344-4e09-460f-a243-8490f16b5e97)
+
+
 ## Root Module structure
 
 All files need to be in root folder
