@@ -1,3 +1,5 @@
+
+
 # Terraform Beginner Bootcamp 2003 - Week 1
 
 ## Root Module structure
@@ -27,12 +29,14 @@ Added a module called terrahouse. This was used to create an s3 bucket that will
 
 ### Modules Sources 
 
-``` module "terrahouse_aws" {
+``` 
+module "terrahouse_aws" {
   source = "./modules/terrahouse_aws"
   user_uuid = var.user_uuid
   bucket_name = var.bucket_name
 
 }
+
 ```
 
 
@@ -45,15 +49,39 @@ I created a static s3 website with 2 .html files, index and error. I use terrafo
 
 Added a CDN that points to the s3 buckets, created a bucket policy using the IAM for user terraboot. I change the error.html and index.html file to include actual html code instead of just text.
 I also added an output to display the CDN enpoint in the console so that I would have to log into the AWS console to get it :-)
-```output "cdn_endpoint" {
+
+``` 
+output "cdn_endpoint" {
   value = module.terrahouse_aws.cdn_endpoint
-}```
+} 
 
 
 ## Setup Content Version
 
 Added contect version so that changes happen only when the contect version number is incremented. Use terraform_data resource because we need to tie content version to a resource and when we change that resource, changes we make are applied. *poor explanation*
 
-```resource "terraform_data" "content_version" {
+ resource "terraform_data" "content_version" {
   input = var.content_version  
-}```
+} 
+
+```
+## Invalidate CloudFront Distribution
+
+Added code to invalidate cloudfront distribution. We used terraform_data again and the trigger was the previous terraform_data. So whenever the content version is changed it will invalidate cache, so that our users no longer pull outdated cache data. We use a provisioner with local-exec to run a command using aws cli to get this done. See code below. Terraform recommends we do not use local-exec but I love it. :-) Andrew really is hungry and tired.
+
+```
+resource "terraform_data" "invalidate_cache" {
+  triggers_replace = terraform_data.content_version.output
+
+  provisioner "local-exec" {
+    # https://developer.hashicorp.com/terraform/language/expressions/strings#heredoc-strings
+    command = <<COMMAND
+aws cloudfront create-invalidation \
+--distribution-id ${aws_cloudfront_distribution.s3_distribution.id} \
+--paths '/*'
+    COMMAND
+
+  }
+}
+
+```
