@@ -48,3 +48,12 @@ I also added an output to display the CDN enpoint in the console so that I would
 ```output "cdn_endpoint" {
   value = module.terrahouse_aws.cdn_endpoint
 }```
+
+
+## Setup Content Version
+
+Added contect version so that changes happen only when the contect version number is incremented. Use terraform_data resource because we need to tie content version to a resource and when we change that resource, changes we make are applied. *poor explanation*
+
+```resource "terraform_data" "content_version" {
+  input = var.content_version  
+}```
