@@ -7,3 +7,7 @@ output "s3_website_endpoint" {
   value       = module.terrahouse_aws.website_endpoint
   description = "The URL for the website"
 }
+
+output "cdn_endpoint" {
+  value = module.terrahouse_aws.cdn_endpoint
+}
