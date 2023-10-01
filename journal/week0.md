@@ -1,6 +1,9 @@
 # Terraform Beginner Bootcamp 2023 - Week 0
 
 
+![Week_0_diagram](https://github.com/rondrae/terraform-beginner-bootcamp-2023/assets/18177131/8656ece8-394d-4805-8c84-565a5c97ee4a)
+
+
 ## Table of Content
 
 - [Install Terraform CLI](#install-the-terraform-cli)
