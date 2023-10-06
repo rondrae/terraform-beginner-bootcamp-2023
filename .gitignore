@@ -33,3 +33,7 @@ override.tf.json
 .terraformrc
 terraform.rc
 variables.tf
+
+
+
+terraform-provider-terratowns/terraform-provider-terratowns_v*
