@@ -37,3 +37,8 @@ variables.tf
 
 
 terraform-provider-terratowns/terraform-provider-terratowns_v*
+bin/build_provider
+bin/build_provider
+bin/build_provider
+bin/build_provider
+bin/build_provider
