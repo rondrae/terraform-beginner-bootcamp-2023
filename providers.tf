@@ -1,13 +1,6 @@
 terraform {
-  required_providers {
-    random = {
-      source  = "hashicorp/random"
-      version = "3.5.1"
-    }
-    aws = {
-      source  = "hashicorp/aws"
-      version = "5.17.0"
-    }
+  #required_providers {
+
   }
   # cloud {
   #   organization = "drae-terraform"
@@ -16,7 +9,7 @@ terraform {
   #     name = "terra-house-sleep"
   #   }
   # }
-}
+#}
 
 provider "random" {
   # Configuration options
