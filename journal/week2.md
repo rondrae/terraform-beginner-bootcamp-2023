@@ -50,3 +50,10 @@ The .rb file contains all the code for the server.
 ## Build Terraform Provider Terratowns
 
 Bunch of Go language stuff. Chaged the terraform log level to debug to get more information when we run terraform commands. I also set it as an environment variable in the gitpod.yml file.
+
+
+## CRUD
+
+Terraform Provider resources utilize CRUD.
+
+CRUD means Create, Read Update, and Delete

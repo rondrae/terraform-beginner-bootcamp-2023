@@ -1,14 +1,14 @@
 terraform {
   #required_providers {
 
-  }
-  # cloud {
-  #   organization = "drae-terraform"
+}
+# cloud {
+#   organization = "drae-terraform"
 
-  #   workspaces {
-  #     name = "terra-house-sleep"
-  #   }
-  # }
+#   workspaces {
+#     name = "terra-house-sleep"
+#   }
+# }
 #}
 
 provider "random" {
