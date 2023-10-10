@@ -2,7 +2,7 @@ variable "region" {}
 variable "access_key" {}
 variable "secret_key" {}
 
-variable "user_uuid" {
+variable "teacherseat_user_uuid" {
   default = "user"
 }
 
@@ -30,3 +30,9 @@ variable "assets_path" {
   description = "path to assets folder"
 }
 
+variable "terratowns_access_token" {
+  
+}
+variable "terratowns_endpoint" {
+  
+}
