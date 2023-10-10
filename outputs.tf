@@ -1,13 +1,13 @@
-# output "bucket_name" {
-#   description = "Bucket Name for static website"
-#   value       = module.terrahouse_aws.ramdon_bucket_name
-# }
+output "bucket_name" {
+  description = "Bucket Name for static website"
+  value       = module.terrahouse_aws.ramdon_bucket_name
+}
 
-# output "s3_website_endpoint" {
-#   value       = module.terrahouse_aws.website_endpoint
-#   description = "The URL for the website"
-# }
+output "s3_website_endpoint" {
+  value       = module.terrahouse_aws.website_endpoint
+  description = "The URL for the website"
+}
 
-# output "cdn_endpoint" {
-#   value = module.terrahouse_aws.cdn_endpoint
-# }
+output "cdn_endpoint" {
+  value = module.terrahouse_aws.cdn_endpoint
+}

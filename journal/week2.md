@@ -57,3 +57,7 @@ Bunch of Go language stuff. Chaged the terraform log level to debug to get more 
 Terraform Provider resources utilize CRUD.
 
 CRUD means Create, Read Update, and Delete
+
+## Tested pushing my TerraTown
+
+I managed to push my terratowns to missingo and was able to view it as well as my websites. For some reason gitpod ate my modules variables file and I had to recreated. Maybe it is my fault, I had variables.tf in my gitignore file. I was already using provider random to create prefix on the end of my bucket name. Changed my TF LOG to INFO as I was getting too much info in the console. I will set it to debug only if I have an error.
