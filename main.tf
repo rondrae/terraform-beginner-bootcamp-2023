@@ -18,7 +18,7 @@ terraform {
 
 
 provider "terratowns" {
-  endpoint  = "http://localhost:4567"
+  endpoint  = "http://localhost:4567/api"
   user_uuid = "e328f4ab-b99f-421c-84c9-4ccea042c7d1"
   token     = "9b49b3fb-b8e9-483c-b703-97ba88eef8e0"
 }
@@ -34,5 +34,19 @@ provider "terratowns" {
 
 # }
 
+resource "terratowns_home" "home" {
+  name = "Overwatch"
+   description = <<DESCRIPTION
+      Overwatch 2 is a free-to-play, team-based action game set in the optimistic future, 
+      where every match is the ultimate 5v5 battlefield brawl...
+      Play as a time-jumping freedom fighter, a beat-dropping battlefield DJ, 
+      or one of over 30 other unique heroes as you battle it out around the globe.
+      DESCRIPTION
+
+  town = "gamers-grotto"
+  content_version = 1
+  #domain_name = module.terrahouse_aws.cdn_endpoint
+  domain_name = "3rsasds.cloudfront.net"
+}
 
 
