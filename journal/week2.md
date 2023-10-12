@@ -61,3 +61,19 @@ CRUD means Create, Read Update, and Delete
 ## Tested pushing my TerraTown
 
 I managed to push my terratowns to missingo and was able to view it as well as my websites. For some reason gitpod ate my modules variables file and I had to recreated. Maybe it is my fault, I had variables.tf in my gitignore file. I was already using provider random to create prefix on the end of my bucket name. Changed my TF LOG to INFO as I was getting too much info in the console. I will set it to debug only if I have an error.
+
+
+## Terraform Cloud
+
+Added the state file to terraform cloud and set the execution to local.
+
+
+## TerraTowns
+
+My cloud front takes 20 minutes to deploy, lol
+
+```
+module.terrahouse_aws.aws_cloudfront_distribution.s3_distribution: Still creating... [20m40s elapsed]
+```
+
+Added my final Terrahome, fingers cross it works.
