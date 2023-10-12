@@ -31,8 +31,8 @@ variable "assets_path" {
 }
 
 variable "terratowns_access_token" {
-  
+
 }
 variable "terratowns_endpoint" {
-  
+
 }

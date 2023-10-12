@@ -5,7 +5,8 @@ tasks:
     before: |
       cd $PROJECT_ROOT
       source ./bin/install_terraform_cli
-      
+      source ./bin/build_provider
+      source ./bin/generate_tfrc_credentials
       source ./bin/set_tf_alias
 
   - name: aws-cli

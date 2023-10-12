@@ -12,7 +12,15 @@ terraform {
       source  = "hashicorp/aws"
       version = "5.17.0"
     }
+
   }
+  # cloud {
+  #   organization = "drae-terraform"
+
+  #   workspaces {
+  #     name = "terra-house-sleep"
+  #   }
+  # }
 }
 
 
@@ -24,29 +32,34 @@ provider "terratowns" {
 }
 
 module "terrahouse_aws" {
- source              = "./modules/terrahouse_aws"
- user_uuid           = var.teacherseat_user_uuid
- #bucket_name         = var.bucket_name
- index_html_filepath = var.index_html_filepath
- error_html_filepath = var.error_html_filepath
- content_version = var.content_version
- assets_path = var.assets_path
+  source    = "./modules/terrahouse_aws"
+  user_uuid = var.teacherseat_user_uuid
+  #bucket_name         = var.bucket_name
+  index_html_filepath = var.index_html_filepath
+  error_html_filepath = var.error_html_filepath
+  content_version     = var.content_version
+  assets_path         = var.assets_path
 
 }
 
 resource "terratowns_home" "home" {
-  name        = "Overwatch"
+  name        = "Jamaican Bread Pudding"
   description = <<DESCRIPTION
-      Overwatch 2 is a free-to-play, team-based action game set in the optimistic future, 
-      where every match is the ultimate 5v5 battlefield brawl...
-      Play as a time-jumping freedom fighter, a beat-dropping battlefield DJ, 
-      or one of over 30 other unique heroes as you battle it out around the globe.
+      It is a favourite for those with a sweet tooth and is enjoyed by Jamaican 
+      citizens living here as well as Jamaicans worldwide who likes to take a piece of Jamaica with them wherever they go.  
+      So go ahead and enjoy using this bread pudding recipe to satisfy that craving or sweet tooth.
       DESCRIPTION
 
-  town            = "missingo"
-  content_version = 1
+  town            = "cooker-cove"
+  
+  content_version = 10
   domain_name     = module.terrahouse_aws.cdn_endpoint
   #domain_name = "3rsasds.cloudfront.net"
 }
+
+
+
+
+
 
 
